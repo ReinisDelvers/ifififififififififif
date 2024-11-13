@@ -6,32 +6,43 @@
       <title>Teroria</title>
     </head>
     <body>
-        <canvas id="canva" style="background-color: brown; display: block; height: 100%; width: 100%;"></canvas>
+        <canvas id="canva" style="background-color: brown; display: block;"></canvas>
         <script>
+            function updateCanvaSize() {
+                canvas = document.getElementById("canva");
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+
             function scenechanger(nextscene) {
+                let text;
+                let choices = [];
+
                 if (nextscene == "start") {
                     text = "Loaded into new world"
-                    choices = []
-                    choices.append("Go to spawn")
+                    choices.push("Go to spawn")
                     return [text, choices]
                 } else if (nextscene == "spawn") {
                     text = "You are at spawn"
-                    choices = []
-                    choices.append("Go in the cave to the right")
-                    choices.append("Explore to the left")
-                    choices.append("Fight the Eye of Cthulu")
+                    choices.push("Go in the cave to the right")
+                    choices.push("Explore to the left")
+                    choices.push("Fight the Eye of Cthulu")
                     return [text, choices]
                 }
             }
-            function updateCanvaSize() {
-                canvas = document.getElementById("canva");
-                canvas.width = window.width;
-                canvas.height = window.height;
+            
+            function scenedrawer() {
+
+            }
+
+            function gameloop() {
+                scenechanger()
+                scenedrawer()
             }
 
             updateCanvaSize()
-            print("asdfasdff")
-
+            window.addEventListener('resize', updateCanvaSize);
+            gameloop()
         </script>
     </body>
 </html>
