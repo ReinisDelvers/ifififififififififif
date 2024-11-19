@@ -9,46 +9,55 @@
         <div class="row" style="min-height: 65px; background-color: aqua;">
             <div class="text-center" id="text"></div>
         </div>
-        <div class="row">
-            <div class="text-center" id="buttons" style=" background-color: rgb(255, 0, 0);"></div>
+        <div class="row"  style=" background-color: rgb(255, 0, 0); min-height: 200px;">
+            <div class="text-center" id="buttons"></div>
         </div>
         <script>
-            // all texts
-            // ["text"]
-            const text_list = ["Loaded into new world", "You are at spawn"];
-            // all choices seperetly and index for index_list to load next scene if choice is selected
-            // [["choice", index_list_index], [...]]
-            const choice_list = [["Go to spawn", 1], ["Go in the cave to the right", 0], ["Explore to the left", 0], ["Fight the Eye of Cthulu", 0]];
-            // list of indexes which is used for selecting correct texts and choices
-            // [[text_list_index, choice_list_index, choice_list_index, ...], [...]]
-            const index_list = [[0, 0], [1, 1, 2, 3]];
+            list = [
+                {
+                    "text" : "Loaded into a new world",
+                    "choices" : ["Go to spawn"],
+                    "next scene" : [1]
+                },{
+                    "text" : "You are at spawn",
+                    "choices" : ["Go in the cave to the right", "Explore to the left", "Fight the Eye of Cthulu"],
+                    "next scene" : [2, 3, 4]
+                },{
+                    "text" : "You are in a cave",
+                    "choices" : ["keep going deeper", "You see a dead-mans chest open it", "You see a dead-mans chest disarm the traps and then open it"],
+                    "next scene" : [5, 6, 7]
+                },{
+                    "text" : "You are exploring to the left",
+                    "choices" : ["Go in the corruption biome", "You find a dungeon"],
+                    "next scene" : [8, 9]
+                },{
+                    "text" : "You are exploring to the left",
+                    "choices" : ["You died! The eye of Cthulu is way too strong for you", "You defeated the eye of Cthulu!!!"],
+                    "next scene" : [10, 11]
+                }
+            ]
 
 
-            function scenechanger(index_list_index) {
-                console.log("scene")
+            function scenechanger(id) {
                 let text = document.getElementById("text");
                 text.innerHTML = "";
-
                 let added_text = document.createElement("h1");
-                added_text.textContent = text_list[index_list[index_list_index][0]]
+                added_text.textContent = list[id]["text"]
                 text.appendChild(added_text);
-                buttons(index_list_index)                
-            }
-
-            function buttons(index_list_index) {
-                console.log("button")
+                
                 let buttons = document.getElementById("buttons");
                 buttons.innerHTML = "";
-
-                for (let i = 0; i < index_list[index_list_index].length-1; i++) {
-                    let button = document.createElement("button");
-                    button.textContent = choice_list[index_list[index_list_index][i+1]][0]
+                for (let i = 0; i < list[id]["choices"].length; i++) {
+                    let button = document.createElement("button")
+                    button.textContent = list[id]["choices"][i]
                     button.className = "btn btn-secondary";
                     button.style = "margin: 50px 5px 0px 5px;"
-                    button.onclick = () => scenechanger(choice_list[index_list[index_list_index][i+1]][1])
+                    button.onclick = () => scenechanger(list[id]["next scene"][i])
                     buttons.appendChild(button);
+                    console.log("id - " +i)
                 }
-            }
+            }    
+            
             scenechanger(0)
         </script>
     </body>
