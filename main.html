@@ -6,16 +6,20 @@
       <title>Teroria</title>
     </head>
     <body>
-        <div class="row" style="min-height: 65px; background-color: aqua;">
+        <div class="row">
             <div class="text-center" id="text"></div>
         </div>
-        <div class="row"  style=" background-color: rgb(255, 0, 0); min-height: 200px;">
+        <div class="row">
+            <div class="text-center" id="image"></div>
+        </div>
+        <div class="row">
             <div class="text-center" id="buttons"></div>
         </div>
         <script>
             list = [
                 {
                     "text" : "Loaded into a new world",
+                    "image" : "./images/imagename.jpg",
                     "choices" : ["Go to spawn"],
                     "next scene" : [1]
                 },{
@@ -42,22 +46,28 @@
                 let text = document.getElementById("text");
                 text.innerHTML = "";
                 let added_text = document.createElement("h1");
-                added_text.textContent = list[id]["text"]
+                added_text.textContent = list[id]["text"];
                 text.appendChild(added_text);
                 
+                let image = document.getElementById("image");
+                image.innerHTML = "";
+                let added_image = document.createElement("img");
+                added_image.src = list[id]["image"];
+                image.appendChild(added_image);
+                
+
                 let buttons = document.getElementById("buttons");
                 buttons.innerHTML = "";
                 for (let i = 0; i < list[id]["choices"].length; i++) {
-                    let button = document.createElement("button")
-                    button.textContent = list[id]["choices"][i]
+                    let button = document.createElement("button");
+                    button.textContent = list[id]["choices"][i];
                     button.className = "btn btn-secondary";
-                    button.style = "margin: 50px 5px 0px 5px;"
-                    button.onclick = () => scenechanger(list[id]["next scene"][i])
+                    button.style = "margin: 50px 5px 0px 5px;";
+                    button.onclick = () => scenechanger(list[id]["next scene"][i]);
                     buttons.appendChild(button);
-                    console.log("id - " +i)
                 }
             }    
             
-            scenechanger(0)
+            scenechanger(0);
         </script>
     </body>
