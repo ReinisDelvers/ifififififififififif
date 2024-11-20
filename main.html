@@ -4,13 +4,34 @@
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
       <title>Teroria</title>
+      <style>
+        body {
+            background-image: url(images/backgroundmain.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            overflow-x: hidden;
+            color: white;
+        }
+        #text h1 {
+            color: white;
+        }
+        #buttons button {
+            margin: 5px;
+        }
+        #image img {
+            border: 5px solid white;
+            border-radius: 10px;
+            max-width: 80%;
+            height: auto;
+        }
+    </style>
     </head>
-    <body style="background-image: url(images/imagename.jpg); background-size: cover; background-repeat: no-repeat; overflow-x: hidden;">
-        <div class="row">
-            <div class="text-center" id="text"></div>
-        </div>
+    <body>
         <div class="row">
             <div class="text-center" id="image"></div>
+        </div>
+        <div class="row">
+            <div class="text-center" id="text"></div>
         </div>
         <div class="row">
             <div class="text-center" id="buttons"></div>
@@ -24,68 +45,114 @@
                     "next scene" : [1]
                 },{
                     "text" : "You are at spawn",
-                    "image" : "",
+                    "image" : "./images/background1.png",
                     "choices" : ["Go in the cave to the right", "Explore to the left", "Fight the Eye of Cthulu"],//scene 1
                     "next scene" : [2, 3, 4]
                 },{
                     "text" : "You are in a cave",
                     "image" : "",
-                    "choices" : ["keep going deeper", "Go to the dead-mans chest"],//scene 2
+                    "choices" : ["Keep going deeper", "Go to the dead-mans chest"],//scene 2
                     "next scene" : [21, 18]
                 },{
-                    "text" : "You are exploring to the left",
-                    "image" : "",
-                    "choices" : ["Go in the corruption biome", "You find a dungeon"],//scene 3
-                    "next scene" : [8, 9]
+                    "text" : "You are in an open field",
+                    "image" : "./images/background4.webp",
+                    "choices" : ["Go into the corruption biome", "Go to the dungeon"],//scene 3
+                    "next scene" : [5, 13]
                 },{
-                    "text" : "You are exploring to the left",
-                    "image" : "",
-                    "choices" : ["You died! The eye of Cthulu is way too strong for you", "You defeated the eye of Cthulu!!!"],//scene 4
-                    "next scene" : [10, 11]
+                    "text" : "Fighting the Eye of Cthulhu",
+                    "image" : "./images/background6.jpg",
+                    "choices" : ["Try ti defeat Eye of Cthulhu"],//scene 4
+                    "next scene" : [9]
                 },{
                     "text" : "You are in a corruption biome",
-                    "image" : "",
-                    "choices" : ["Fight Eater Of Worlds?", "You defeated the eye of Cthulu!!!"],//scene 4
-                    "next scene" : [10, 11]
+                    "image" : "./images/background3.webp",
+                    "choices" : ["Fight Eater Of Worlds?"],
+                    "next scene" : [6]
                     //scene 5
                 },{
-                    //scene 6
+                    "text" : "Fighting the Eater Of Worlds",
+                    "image" : "",
+                    "choices" : ["Try to defeat eater of worlds"],
+                    "next scene" : [10]
                 },{
-                    //scene 7
+                    "text" : "You died! The Eater Of Worlds is way too strong for you!",
+                    "image" : "./images/death.jpg",
+                    "choices" : ["Respawn?"],
+                    "next scene" : [1]
                 },{
-                    //scene 8
+                    "text" : "You died! The Eye of Crhulhu is way too strong for you!",
+                    "image" : "./images/death.jpg",
+                    "choices" : ["Respawn?"],
+                    "next scene" : [1]
                 },{
-                    //scene 9
+                    "text" : "You defeated the eye of Cthulhu!",
+                    "image" : "",
+                    "choices" : ["You Win!"],
+                    "next scene" : [10]
                 },{
-                    //scene 10
+                    "text" : "You Win!",
+                    "image" : "",
+                    "choices" : ["Keep playing?", "End?"],
+                    "next scene" : [1, 11]
                 },{
-                    //scene 11
+                    "text" : "End",
+                    "image" : "",
+                    "choices" : [],
+                    "next scene" : []
                 },{
-                    //scene 12
+                    "text" : "Your gear is too weak and you die to an Eater Of Souls",
+                    "image" : "./images/death.jpg",
+                    "choices" : ["Respawn?"],
+                    "next scene" : [1]
                 },{
-                    //scene 13
+                    "text" : "You are at a dungeon.",
+                    "image" : "",
+                    "choices" : ["Enter dungeon", "Fight Skeletron"],
+                    "next scene" : [14, 15]
                 },{
-                    //scene 14
+                    "text" : "You Died!",
+                    "image" : "./images/death.jpg",
+                    "choices" : ["Respawn?"],
+                    "next scene" : [1]
                 },{
-                    //scene 15
+                    "text" : "Fighting Skeletron",
+                    "image" : "",
+                    "choices" : ["Try to deafeat Skeletron"],
+                    "next scene" : [16]
                 },{
-                    //scene 16
+                    "text" : "You Win!",
+                    "image" : "",
+                    "choices" : ["Enter dungeon?"],
+                    "next scene" : [17]
                 },{
-                    //scene 17
+                    "text" : "You Win! 100% Completion unlocked!",
+                    "image" : "",
+                    "choices" : [],
+                    "next scene" : []
                 },{
-                    //scene 18
+                    "text" : "You are at the dead-mans chest",
+                    "image" : "",
+                    "choices" : ["Keep going deeper", "Disarm the traps and then open it", "Open it"],
+                    "next scene" : [21, 20, 19]
                 },{
-                    //scene 19
+                    "text" : "You died!",
+                    "image" : "./images/death.jpg",
+                    "choices" : ["Respawn?"],
+                    "next scene" : [1]
                 },{
-                    //scene 20
+                    "text" : "You recive an enchanted Boomerang",
+                    "image" : "./images/background5.webp",
+                    "choices" : ["Keep going deeper"],
+                    "next scene" : [21]
                 },{
                     "text" : "You mine some platinum ore and find some life crystals",
-                    "image" : "",
+                    "image" : "./images/background5.webp",
                     "choices" : ["C O N S U M E"],//scene 2
                     "next scene" : [22]
                     //scene 21
                 },{
                     "text": "You consume the life crystals and make platinum armor; +300hp and + platinum armor",
+                    "image" : "./images/background5.webp",
                     "choices": ["Back to spawn!"],
                     "next scene" : [1]
                 }
