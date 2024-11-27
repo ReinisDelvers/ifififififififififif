@@ -38,10 +38,9 @@
         </div>
         <script>
             let PlayerHasHpBoost = false;
-            let CanKillTheEye = false;
-            let CanKillTheWorm = false;
-            let CanKillTheSkeleton = false;
-            list = [
+            let TheEyeIsKilled = false;
+            let TheWormIsKilled = false;
+             list = [
                 {
                     "text" : "Loaded into a new world",
                     "image" : "./images/start.jpg",
@@ -165,9 +164,9 @@
                 //[22 set PlayerHasHpBoost == true;]
                 //[20(70% or 19 30%)]
                 //[9(if PlayerHasHpBoost == true; then 9 60% or 8 40% else 8 100%]
-                //[5 if CanKillTheEye == true; then show 6(button) else transfer to 12 instantly]
-                //[7(7 50% and CanKillTheWorm == true; or 10 50%) ]
-                //[13 if CanKillTheWorm == true; then show 14(button) and 15(button) else only 14(button)]
+                //[5 if TheEyeIsKilled == true; then show 6(button) else transfer to 12 instantly]
+                //[7(7 50% and TheWormIsKilled == true; or 10 50%) ]
+                //[13 if TheWormIsKilled == true; then show 14(button) and 15(button) else only 14(button)]
                 //[16(16 50% or ? 50%)]
 
 
