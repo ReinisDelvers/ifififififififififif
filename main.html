@@ -221,8 +221,25 @@
                                 currentScene["next scene"] = [8]
                             }
                                 
+                        } else if(id == 3){
+                            console.log(TheEyeIsKilled)
+                            if(TheEyeIsKilled==false){
+                                currentScene["next scene"][0] = [12]
+                            } else{
+                                currentScene["next scene"][0] = [5]
+                            }
+                        } else if(id == 6){
+                            console.log(TheEyeIsKilled)
+                            if(TheEyeIsKilled==true){
+                                if (Math.floor(Math.random() * 10) < 5) {
+                                    currentScene["next scene"] = [10]
+                                } else{
+                                    currentScene["next scene"] = [7]
+                                }
+                            } else {
+                                currentScene["next scene"] = [8]
+                            }
                         }
-
                         scenechanger(currentScene["next scene"][i]);
                     } 
                     buttons.appendChild(button);
