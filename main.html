@@ -178,7 +178,7 @@
 
 
                 let currentScene = list[id]; //man vieglāk ir ka ir current scene nevis list[id] lai gan tas ir literally the same fcking thing
-                if (currentScene == 21){
+                if (id == 21){
                     PlayerHasHpBoost = true;
                 }
                 if (currentScene == 9){
@@ -209,19 +209,16 @@
                     button.textContent = currentScene["choices"][i];
                     button.className = "btn btn-secondary";
                     button.onclick = () => {
-                        if(currentScene == 4){
-                            if(PlayerHasHpBoost){
+                        if(id == 4){
+                            console.log(PlayerHasHpBoost)
+                            if(PlayerHasHpBoost==true){
                                 if (Math.floor(Math.random() * 10) < 7) {
                                     currentScene["next scene"] = [9]
                                 } else{
                                     currentScene["next scene"] = [8]
                                 }
                             } else {
-                                if (Math.floor(Math.random() * 10) < 3) {
-                                    currentScene["next scene"] = [9]
-                                } else{
-                                    currentScene["next scene"] = [8]
-                                }
+                                currentScene["next scene"] = [8]
                             }
                                 
                         }
@@ -230,6 +227,7 @@
                     } 
                     buttons.appendChild(button);
                 }
+                console.log("dsfa "+id)
             }    
             
             scenechanger(0);
