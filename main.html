@@ -6,14 +6,14 @@
       <title>Teroria</title>
       <style>
         body {
-            background-image: url(images/backgroundmain.png);
+            background-image: url(images/black.jpg);
             background-size: cover;
             background-repeat: no-repeat;
             overflow-x: hidden;
             color: white;
         }
         #text h1 {
-            color: black;
+            color: white;
         }
         #buttons button {
             margin: 5px;
@@ -44,117 +44,117 @@
             list = [
                 {
                     "text" : "Loaded into a new world",
-                    "image" : "./images/imagename.jpg", //scene 0
+                    "image" : "./images/start.jpg",
                     "choices" : ["Go to spawn"],
                     "next scene" : [1]
                 },{
                     "text" : "You are at spawn",
-                    "image" : "./images/background1.png",
-                    "choices" : ["Go in the cave to the right", "Explore to the left", "Fight the Eye of Cthulu"],//scene 1
+                    "image" : "./images/spawn.png",
+                    "choices" : ["Go in the cave to the right", "Explore to the left", "Fight the Eye of Cthulu"],
                     "next scene" : [2, 3, 4]
                 },{
                     "text" : "You are in a cave",
-                    "image" : "",
-                    "choices" : ["Keep going deeper", "Go to the dead-mans chest"],//scene 2
+                    "image" : "./images/cave.png",
+                    "choices" : ["Keep going deeper", "Go to the dead-mans chest"],
                     "next scene" : [21, 18]
                 },{
                     "text" : "You are in an open field",
-                    "image" : "./images/background4.webp",
-                    "choices" : ["Go into the corruption biome", "Go to the dungeon"],//scene 3
+                    "image" : "./images/plains.webp",
+                    "choices" : ["Go into the corruption biome", "Go to the dungeon"],
                     "next scene" : [5, 13]
                 },{
                     "text" : "Fighting the Eye of Cthulhu",
-                    "image" : "./images/background6.jpg",
-                    "choices" : ["Try to defeat Eye of Cthulhu"],//scene 4
-                    "next scene" : [8]
+                    "image" : "./images/eye.jpg",
+                    "choices" : ["Try ti defeat Eye of Cthulhu"],
+                    "next scene" : [9]
                 },{
                     "text" : "You are in a corruption biome",
-                    "image" : "./images/background3.webp",
-                    "choices" : ["Fight Eater Of Worlds?"],//scene 5
+                    "image" : "./images/corruption.png",
+                    "choices" : ["Fight Eater Of Worlds?"],
                     "next scene" : [6]
                 },{
                     "text" : "Fighting the Eater Of Worlds",
-                    "image" : "",
-                    "choices" : ["Try to defeat eater of worlds"],//scene 6
+                    "image" : "./images/worm.png",
+                    "choices" : ["Try to defeat eater of worlds"],
                     "next scene" : [10]
                 },{
-                    "text" : "You died! The Eater Of Worlds is way too strong for you!",//scene 7
+                    "text" : "You died! The Eater Of Worlds is way too strong for you!",
                     "image" : "./images/death.jpg",
                     "choices" : ["Respawn?"],
                     "next scene" : [1]
                 },{
-                    "text" : "You died! The Eye of Cthulhu is way too strong for you!",//scene 8
+                    "text" : "You died! The Eye of Crhulhu is way too strong for you!",
                     "image" : "./images/death.jpg",
                     "choices" : ["Respawn?"],
                     "next scene" : [1]
                 },{
-                    "text" : "You defeated the eye of Cthulhu!",//scene 9
-                    "image" : "",
+                    "text" : "You defeated the eye of Cthulhu!",
+                    "image" : "./images/win.jpg",
                     "choices" : ["You Win!"],
                     "next scene" : [10]
                 },{
                     "text" : "You Win!",
-                    "image" : "",
-                    "choices" : ["Keep playing?", "End?"],//scene 10
+                    "image" : "./images/win.jpg",
+                    "choices" : ["Keep playing?", "End?"],
                     "next scene" : [1, 11]
                 },{
-                    "text" : "End",//scene 11
-                    "image" : "",
+                    "text" : "End",
+                    "image" : "./images/mainend.png",
                     "choices" : [],
                     "next scene" : []
                 },{
-                    "text" : "Your gear is too weak and you die to an Eater Of Souls",//scene 12
+                    "text" : "Your gear is too weak and you die to an Eater Of Souls",
                     "image" : "./images/death.jpg",
                     "choices" : ["Respawn?"],
                     "next scene" : [1]
                 },{
                     "text" : "You are at a dungeon.",
-                    "image" : "",
-                    "choices" : ["Enter dungeon", "Fight Skeletron"],//scene 13
+                    "image" : "./images/dungeon.avif",
+                    "choices" : ["Enter dungeon", "Fight Skeletron"],
                     "next scene" : [14, 15]
                 },{
                     "text" : "You Died!",
-                    "image" : "./images/death.jpg",//scene 14
+                    "image" : "./images/death.jpg",
                     "choices" : ["Respawn?"],
                     "next scene" : [1]
                 },{
                     "text" : "Fighting Skeletron",
-                    "image" : "",
-                    "choices" : ["Try to deafeat Skeletron"],//scene 15
+                    "image" : "./images/skeletron.jpg",
+                    "choices" : ["Try to deafeat Skeletron"],
                     "next scene" : [16]
                 },{
                     "text" : "You Win!",
-                    "image" : "",
-                    "choices" : ["Enter dungeon?"],//scene 16
+                    "image" : "./images/win.jpg",
+                    "choices" : ["Enter dungeon?"],
                     "next scene" : [17]
                 },{
-                    "text" : "You Win! 100% Completion unlocked!", //scene 17
-                    "image" : "",
+                    "text" : "You Win! 100% Completion unlocked!",
+                    "image" : "./images/win.jpg",
                     "choices" : [],
                     "next scene" : []
                 },{
                     "text" : "You are at the dead-mans chest",
-                    "image" : "",
-                    "choices" : ["Keep going deeper", "Disarm the traps and then open it", "Open it"],//scene 18
+                    "image" : "./images/chest.jpg",
+                    "choices" : ["Keep going deeper", "Disarm the traps and then open it", "Open it"],
                     "next scene" : [21, 20, 19]
                 },{
                     "text" : "You died!",
-                    "image" : "./images/death.jpg",//scene 19
+                    "image" : "./images/death.jpg",
                     "choices" : ["Respawn?"],
                     "next scene" : [1]
                 },{
-                    "text" : "You recive an enchanted Boomerang",//scene 20
-                    "image" : "./images/background5.webp",
+                    "text" : "You recive an enchanted Boomerang",
+                    "image" : "./images/shroom.webp",
                     "choices" : ["Keep going deeper"],
                     "next scene" : [21]
                 },{
-                    "text" : "You mine some platinum ore and find some life crystals",//scene 21
-                    "image" : "./images/background5.webp",
+                    "text" : "You mine some platinum ore and find some life crystals",
+                    "image" : "./images/cavecrystal.avif",
                     "choices" : ["C O N S U M E"],
                     "next scene" : [22]
                 },{
-                    "text": "You consume the life crystals and make platinum armor; +300hp and + platinum armor",//scene 22
-                    "image" : "./images/background5.webp",
+                    "text": "You consume the life crystals and make platinum armor; +300hp and + platinum armor",
+                    "image" : "./images/cavecrystal.avif",
                     "choices": ["Back to spawn!"],
                     "next scene" : [1]
                 }
