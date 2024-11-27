@@ -184,6 +184,15 @@
                 if (currentScene == 9){
                     TheEyeIsKilled = true;
                 }
+                if (currentScene == 17){
+                    TheEyeIsKilled = true;
+                }
+                if (currentScene == 16){
+                    TheEyeIsKilled = true;
+                }
+                if (currentScene == 10){
+                    TheEyeIsKilled = true;
+                }
                 if(currentScene == 23){
                     TheWormIsKilled = true
                 }
@@ -205,7 +214,7 @@
                 buttons.innerHTML = "";
 
                 for (let i = 0; i < currentScene["choices"].length; i++) {
-                    let button = document.createElement("button");
+                    let button = document.createElement("buttons");
                     button.textContent = currentScene["choices"][i];
                     button.className = "btn btn-secondary";
                     button.onclick = () => {
@@ -221,12 +230,30 @@
                                 currentScene["next scene"] = [8]
                             }
                                 
+                        } else if(id == 3){
+                            console.log(TheEyeIsKilled)
+                            if(TheEyeIsKilled==false){
+                                currentScene["next scene"][0] = [12]
+                            } else{
+                                currentScene["next scene"][0] = [5]
+                            }
+                        } else if(id == 6){
+                            console.log(TheEyeIsKilled)
+                            if(TheEyeIsKilled==true){
+                                if (Math.floor(Math.random() * 10) < 5) {
+                                    currentScene["next scene"] = [10]
+                                } else{
+                                    currentScene["next scene"] = [7]
+                                }
+                            } else {
+                                currentScene["next scene"] = [8]
+                            }
                         }
-
-                        scenechanger(currentScene["next scene"][i]);
-                    } 
-                    buttons.appendChild(button);
+                        scenechanger(currentScene["next scene"][i]); 
                 }
+                
+                buttons.appendChild(button);
+            }
                 console.log("dsfa "+id)
             }    
             
