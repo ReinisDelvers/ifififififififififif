@@ -6,7 +6,7 @@
       <title>Teroria</title>
       <style>
         body {
-            background-image: url(images/backgroundmain.png);
+            background-image: url(images/black.jpg);
             background-size: cover;
             background-repeat: no-repeat;
             overflow-x: hidden;
@@ -40,38 +40,38 @@
             list = [
                 {
                     "text" : "Loaded into a new world",
-                    "image" : "./images/imagename.jpg", //scene 0
+                    "image" : "./images/start.jpg", //scene 0
                     "choices" : ["Go to spawn"],
                     "next scene" : [1]
                 },{
                     "text" : "You are at spawn",
-                    "image" : "./images/background1.png",
+                    "image" : "./images/spawn.png",
                     "choices" : ["Go in the cave to the right", "Explore to the left", "Fight the Eye of Cthulu"],//scene 1
                     "next scene" : [2, 3, 4]
                 },{
                     "text" : "You are in a cave",
-                    "image" : "",
+                    "image" : "./images/cave.png",
                     "choices" : ["Keep going deeper", "Go to the dead-mans chest"],//scene 2
                     "next scene" : [21, 18]
                 },{
                     "text" : "You are in an open field",
-                    "image" : "./images/background4.webp",
+                    "image" : "./images/plains.webp",
                     "choices" : ["Go into the corruption biome", "Go to the dungeon"],//scene 3
                     "next scene" : [5, 13]
                 },{
                     "text" : "Fighting the Eye of Cthulhu",
-                    "image" : "./images/background6.jpg",
+                    "image" : "./images/eye.jpg",
                     "choices" : ["Try ti defeat Eye of Cthulhu"],//scene 4
                     "next scene" : [9]
                 },{
                     "text" : "You are in a corruption biome",
-                    "image" : "./images/background3.webp",
+                    "image" : "./images/corruption.png",
                     "choices" : ["Fight Eater Of Worlds?"],
                     "next scene" : [6]
                     //scene 5
                 },{
                     "text" : "Fighting the Eater Of Worlds",
-                    "image" : "",
+                    "image" : "./images/worm.png",
                     "choices" : ["Try to defeat eater of worlds"],
                     "next scene" : [10]
                 },{
@@ -86,17 +86,17 @@
                     "next scene" : [1]
                 },{
                     "text" : "You defeated the eye of Cthulhu!",
-                    "image" : "",
+                    "image" : "./images/win.jpg",
                     "choices" : ["You Win!"],
                     "next scene" : [10]
                 },{
                     "text" : "You Win!",
-                    "image" : "",
+                    "image" : "./images/win.jpg",
                     "choices" : ["Keep playing?", "End?"],
                     "next scene" : [1, 11]
                 },{
                     "text" : "End",
-                    "image" : "",
+                    "image" : "./images/mainend.png",
                     "choices" : [],
                     "next scene" : []
                 },{
@@ -106,7 +106,7 @@
                     "next scene" : [1]
                 },{
                     "text" : "You are at a dungeon.",
-                    "image" : "",
+                    "image" : "./images/dungeon.avif",
                     "choices" : ["Enter dungeon", "Fight Skeletron"],
                     "next scene" : [14, 15]
                 },{
@@ -116,22 +116,22 @@
                     "next scene" : [1]
                 },{
                     "text" : "Fighting Skeletron",
-                    "image" : "",
+                    "image" : "./images/skeletron.jpg",
                     "choices" : ["Try to deafeat Skeletron"],
                     "next scene" : [16]
                 },{
                     "text" : "You Win!",
-                    "image" : "",
+                    "image" : "./images/win.jpg",
                     "choices" : ["Enter dungeon?"],
                     "next scene" : [17]
                 },{
                     "text" : "You Win! 100% Completion unlocked!",
-                    "image" : "",
+                    "image" : "./images/win.jpg",
                     "choices" : [],
                     "next scene" : []
                 },{
                     "text" : "You are at the dead-mans chest",
-                    "image" : "",
+                    "image" : "./images/chest.jpg",
                     "choices" : ["Keep going deeper", "Disarm the traps and then open it", "Open it"],
                     "next scene" : [21, 20, 19]
                 },{
@@ -141,18 +141,18 @@
                     "next scene" : [1]
                 },{
                     "text" : "You recive an enchanted Boomerang",
-                    "image" : "./images/background5.webp",
+                    "image" : "./images/shroom.webp",
                     "choices" : ["Keep going deeper"],
                     "next scene" : [21]
                 },{
                     "text" : "You mine some platinum ore and find some life crystals",
-                    "image" : "./images/background5.webp",
+                    "image" : "./images/cavecrystal.avif",
                     "choices" : ["C O N S U M E"],//scene 2
                     "next scene" : [22]
                     //scene 21
                 },{
                     "text": "You consume the life crystals and make platinum armor; +300hp and + platinum armor",
-                    "image" : "./images/background5.webp",
+                    "image" : "./images/cavecrystal.avif",
                     "choices": ["Back to spawn!"],
                     "next scene" : [1]
                 }
