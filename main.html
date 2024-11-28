@@ -109,8 +109,8 @@
                 },{
                     "text" : "You are at a dungeon.",//scene 13
                     "image" : "./images/dungeon.avif",
-                    "choices" : ["Enter dungeon", "Fight Skeletron"],
-                    "next scene" : [14, 15]
+                    "choices" : ["Enter dungeon"],
+                    "next scene" : [14]
                 },{
                     "text" : "You Died! Skeletron is guarding the entrance",//scene 14
                     "image" : "./images/death.jpg",
@@ -250,8 +250,15 @@
                             } else {
                                 currentScene["next scene"] = [19]
                             }
+                        } else if(id==13){
+                            console.log(TheWormIsKilled)
+                            if(TheWormIsKilled==true){
+                                currentScene["next scene"].push(15)
+                                currentScene["choices"].push("Fight Skeletron")
+                            } else {
+                                currentScene["next scene"] = [19]
+                            }
                         }
-
 
 
 
