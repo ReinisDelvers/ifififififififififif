@@ -110,7 +110,7 @@
                     "text" : "You are at a dungeon.",//scene 13
                     "image" : "./images/dungeon.avif",
                     "choices" : ["Enter dungeon"],
-                    "next scene" : [14]
+                    "next scene" : [14, 15]
                 },{
                     "text" : "You Died! Skeletron is guarding the entrance",//scene 14
                     "image" : "./images/death.jpg",
@@ -200,10 +200,14 @@
                 added_image.src = list[id]["image"];
                 image.appendChild(added_image);
                 
+                
+                if(TheWormIsKilled==true){
+                    list[13]["choices"][1] = "Fight Skeletron"
+                }
+
 
                 let buttons = document.getElementById("buttons");
                 buttons.innerHTML = "";
-
                 for (let i = 0; i < currentScene["choices"].length; i++) {
                     let button = document.createElement("button");
                     button.textContent = currentScene["choices"][i];
@@ -250,16 +254,7 @@
                             } else {
                                 currentScene["next scene"] = [19]
                             }
-                        } else if(id==13){
-                            console.log(TheWormIsKilled)
-                            if(TheWormIsKilled==true){
-                                currentScene["next scene"].push(15)
-                                currentScene["choices"].push("Fight Skeletron")
-                            } else {
-                                currentScene["next scene"] = [19]
-                            }
                         }
-
 
 
                         scenechanger(currentScene["next scene"][i]);
