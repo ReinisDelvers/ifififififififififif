@@ -74,7 +74,7 @@
                 },{
                     "text" : "Fighting the Eater Of Worlds",//scene 6
                     "image" : "./images/worm.png",
-                    "choices" : ["Try to defeat eater of worlds"],
+                    "choices" : ["Try to defeat Eater of worlds"],
                     "next scene" : [7]
                 },{
                     "text" : "You died! The Eater Of Worlds is way too strong for you!",//scene 7
@@ -112,7 +112,7 @@
                     "choices" : ["Enter dungeon", "Fight Skeletron"],
                     "next scene" : [14, 15]
                 },{
-                    "text" : "You Died!",//scene 14
+                    "text" : "You Died! Skeletron is guarding the entrance",//scene 14
                     "image" : "./images/death.jpg",
                     "choices" : ["Respawn?"],
                     "next scene" : [1]
@@ -232,14 +232,29 @@
                             console.log(TheEyeIsKilled)
                             if(TheEyeIsKilled==true){
                                 if (Math.floor(Math.random() * 10) < 5) {
-                                    currentScene["next scene"] = [10]
+                                    currentScene["next scene"] = [23]
                                 } else{
                                     currentScene["next scene"] = [7]
                                 }
                             } else {
-                                currentScene["next scene"] = [8]
+                                currentScene["next scene"] = [7]
+                            }
+                        } else if(id == 15){
+                            console.log(TheWormIsKilled)
+                            if(TheWormIsKilled==true){
+                                if (Math.floor(Math.random() * 10) < 5) {
+                                    currentScene["next scene"] = [16]
+                                } else{
+                                    currentScene["next scene"] = [7]
+                                }
+                            } else {
+                                currentScene["next scene"] = [19]
                             }
                         }
+
+
+
+
                         scenechanger(currentScene["next scene"][i]);
                     } 
                     buttons.appendChild(button);
