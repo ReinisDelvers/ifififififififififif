@@ -214,7 +214,6 @@
                     button.className = "btn btn-secondary";
                     button.onclick = () => {
                         if(id == 4){
-                            console.log(PlayerHasHpBoost)
                             if(PlayerHasHpBoost==true){
                                 if (Math.floor(Math.random() * 10) < 7) {
                                     currentScene["next scene"] = [9]
@@ -226,14 +225,12 @@
                             }
                                 
                         } else if(id == 3){
-                            console.log(TheEyeIsKilled)
-                            if(TheEyeIsKilled==false){
+                               if(TheEyeIsKilled==false){
                                 currentScene["next scene"][0] = [12]
                             } else{
                                 currentScene["next scene"][0] = [5]
                             }
                         } else if(id == 6){
-                            console.log(TheEyeIsKilled)
                             if(TheEyeIsKilled==true){
                                 if (Math.floor(Math.random() * 10) < 5) {
                                     currentScene["next scene"] = [23]
@@ -244,7 +241,6 @@
                                 currentScene["next scene"] = [7]
                             }
                         } else if(id == 15){
-                            console.log(TheWormIsKilled)
                             if(TheWormIsKilled==true){
                                 if (Math.floor(Math.random() * 10) < 5) {
                                     currentScene["next scene"] = [16]
@@ -261,7 +257,6 @@
                     } 
                     buttons.appendChild(button);
                 }
-                console.log("dsfa "+id)
             }    
             
             scenechanger(0);
