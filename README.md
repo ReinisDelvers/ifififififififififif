@@ -1,3 +1,1 @@
-# ifififififififififif
-
-# not to be confused with tryexcepttryexcepttryexcepttryexcepttryexcept
+# ifififififififififif.github.io
